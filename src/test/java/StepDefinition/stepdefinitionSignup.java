@@ -9,7 +9,7 @@ import pageObjects.HomePage;
 public class stepdefinitionSignup {
 
 
-    @Given("User navigate to signup page")
+       @Given("User navigate to signup page")
         public void user_navigate_to_signup_page() {
             System.out.println("Navigating to signup page...");
         }
@@ -18,7 +18,7 @@ public class stepdefinitionSignup {
             public void user_enters_signup_details() throws InterruptedException {
             HomePage hp = new HomePage(Hooks.driver);
             hp.clickRegister_btn();
-            hp.setEmail("swathy233@gmail.com");
+            hp.setEmail("swathy33@gmail.com");
             hp.setTxtPassword("Swath@344");
             hp.clickTandC();
             hp.clickSignUpNow();

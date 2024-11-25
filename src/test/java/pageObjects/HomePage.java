@@ -1,5 +1,6 @@
 package pageObjects;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -47,10 +48,10 @@ public class HomePage extends BasePage
         Thread.sleep(1000);
     }
 
-    public void clickSignUpNow()
-    {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.elementToBeClickable(btnSignUp));
+    public void clickSignUpNow() {
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", btnSignUp);
+        ((JavascriptExecutor)driver).executeScript("arguments[0].click();",btnSignUp);
         btnSignUp.click();
     }
+
 }
