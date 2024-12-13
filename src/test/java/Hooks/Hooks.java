@@ -17,21 +17,21 @@ public class Hooks
     public void setup()
     {
 // initializeBrowser();
-        WebDriverManager.chromedriver().setup();
+//        WebDriverManager.chromedriver().setup();
         driver=new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().deleteAllCookies();
-        driver.get("https://uatweb.gyansetu.ai/");
+        driver.get("https://qaweb.gyansetu.ai/");
         driver.manage().window().maximize();
 
     }
 
-  /*  @After
+    @After
     public void tearDown()
     {
         if (driver != null)
         {
             driver.quit();
         }
-    }*/
+    }
 }

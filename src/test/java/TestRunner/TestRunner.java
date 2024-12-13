@@ -14,5 +14,5 @@ import org.junit.runner.RunWith;
                 "json:target/json-cucumber.json"   // JSON report location
         }
 )
-public class testRunner {
+public class TestRunner {
 }

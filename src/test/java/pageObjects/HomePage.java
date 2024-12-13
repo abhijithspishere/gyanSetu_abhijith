@@ -30,6 +30,9 @@ public class HomePage extends BasePage
     @FindBy(xpath = "//button[normalize-space()='Sign Up Now']")
     WebElement btnSignUp;
 
+    @FindBy(xpath = "//div[contains(text(),'User created successfully')]")
+    WebElement validation;
+
 
     public  void clickRegister_btn()
     {
@@ -45,13 +48,27 @@ public class HomePage extends BasePage
     }
     public void clickTandC() throws InterruptedException {
         checkTandC.click();
-        Thread.sleep(1000);
+
     }
 
-    public void clickSignUpNow() {
-        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", btnSignUp);
+    public void clickSignUpNow() throws InterruptedException {
+        /*((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", btnSignUp);
         ((JavascriptExecutor)driver).executeScript("arguments[0].click();",btnSignUp);
-        btnSignUp.click();
+        btnSignUp.click();*/
+
+        JavascriptExecutor js=(JavascriptExecutor)driver;
+        js.executeScript("arguments[0].click()",btnSignUp);
+        Thread.sleep(6000);
+    }
+
+    public void fetchValidate()
+    {
+        String validate = validation.getText();
+        System.out.println(validate);
+
+        if (validate.equals("User created successfully")){
+            System.out.println("Account created successfully");
+        }
     }
 
 }
