@@ -1,9 +1,10 @@
 package StepDefinition;
 
 import Hooks.Hooks;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import io.cucumber.java.en.*;
+import io.cucumber.java.en.Given;
 import pageObjects.User_Profile;
 
 
@@ -13,18 +14,18 @@ public class userprofileSte {
     User_Profile up = new User_Profile(Hooks.driver);
 
     @Given("The user is on the Basic Information section")
-    public void the_user_is_on_the_basic_information_section() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    public void the_user_is_on_the_basic_information_section() throws InterruptedException {
+        System.out.println("Entering FirstName now");
+
     }
 
     @When("The user enters {string} as First Name")
-    public void the_user_enters_as_first_name(String string) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    public void the_user_enters_as_first_name(String stringFirstName) {
+      up.input_firstname(stringFirstName);
+
     }
 
-    @When("The user enters {string} as Last Name")
+    @And("The user enters {string} as Last Name")
     public void the_user_enters_as_last_name(String string) {
         // Write code here that turns the phrase above into concrete actions
         throw new io.cucumber.java.PendingException();

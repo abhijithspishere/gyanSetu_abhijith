@@ -6,7 +6,8 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "src/test/java/Features", // Path to feature files
+        features ={
+                "src/test/java/Features"}, // Path to feature files
         glue = {"StepDefinition", "Hooks"}, // Package names of Step Definitions and Utilities
         plugin = {
                 "pretty",
