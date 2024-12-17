@@ -8,7 +8,7 @@ import io.cucumber.java.en.Given;
 import pageObjects.User_Profile;
 
 
-public class userprofileSte {
+public class userprofileStepdefinition {
 
 
     User_Profile up = new User_Profile(Hooks.driver);
@@ -26,21 +26,18 @@ public class userprofileSte {
     }
 
     @And("The user enters {string} as Last Name")
-    public void the_user_enters_as_last_name(String string) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    public void the_user_enters_as_last_name(String stringlastname) {
+       up.input_lastname(stringlastname);
     }
 
-    @When("The user selects {string} as Gender")
-    public void the_user_selects_as_gender(String string) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    @And("The user selects Gender")
+    public void theUserSelectsGender() {
+        up.choice_Gender();
     }
 
-    @When("The user enters {string} as DOB")
-    public void the_user_enters_as_dob(String string) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    @And("The user enters DOB")
+    public void theUserEntersDOB() throws InterruptedException {
+        up.setDateOfBirth();
     }
 
     @When("The user enters {string} as Father Name")
@@ -312,4 +309,7 @@ public class userprofileSte {
         // Write code here that turns the phrase above into concrete actions
         throw new io.cucumber.java.PendingException();
     }
+
+
+
 }

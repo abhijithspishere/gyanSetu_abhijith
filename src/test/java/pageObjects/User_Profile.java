@@ -1,5 +1,6 @@
 package pageObjects;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -26,9 +27,18 @@ public class User_Profile extends BasePage {
         @FindBy(xpath = "//input[@name='first_name']")
         WebElement txt_firstName;
 
+        @FindBy(name="last_name")
+        WebElement txt_lastname;
+
+        @FindBy(xpath = "//input[@value='female']")
+        WebElement radioBtn_Gender;
+
+        @FindBy(xpath = "//input[@id=':r5:']")
+        WebElement dateOfBirth;
+
         public void profileClose() throws InterruptedException {
             Btn_profileChat_close.click();
-            System.out.println("clicked close button");
+//            System.out.println("clicked close button");
 //            Thread.sleep(1000);
         }
 
@@ -48,4 +58,19 @@ public class User_Profile extends BasePage {
             txt_firstName.clear();
             txt_firstName.sendKeys(firstname);
         }
+
+        public void input_lastname(String lastname){
+            txt_lastname.clear();
+            txt_lastname.sendKeys(lastname);
+        }
+        public void choice_Gender(){
+            radioBtn_Gender.click();
+        }
+
+        public void setDateOfBirth() throws InterruptedException {
+            dateOfBirth.click();
+//            dateOfBirth.clear();
+            dateOfBirth.sendKeys("12/12/2005");
+        }
+
 }
