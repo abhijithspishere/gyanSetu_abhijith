@@ -41,39 +41,33 @@ public class userprofileStepdefinition {
     }
 
     @When("The user enters {string} as Father Name")
-    public void the_user_enters_as_father_name(String string) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    public void the_user_enters_as_father_name(String stringfather) {
+        up.input_fathername(stringfather);
     }
 
     @When("The user enters {string} as Mother Name")
-    public void the_user_enters_as_mother_name(String string) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    public void the_user_enters_as_mother_name(String stringMothername) {
+        up.input_motherName(stringMothername);
     }
 
     @When("The user enters {string} as Guardian Name")
-    public void the_user_enters_as_guardian_name(String string) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    public void the_user_enters_as_guardian_name(String stringGuardianName) {
+       up.input_guardianName(stringGuardianName);
     }
 
     @When("The user enters {string} as Aim")
-    public void the_user_enters_as_aim(String string) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    public void the_user_enters_as_aim(String stringAim) {
+     up.input_aim(stringAim);
     }
 
     @When("The user uploads a profile picture")
     public void the_user_uploads_a_profile_picture() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+       up.set_profilePicture();
     }
 
-    @When("The user clicks the Next button")
-    public void the_user_clicks_the_next_button() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    @And("The user clicks the Address Section")
+    public void theUserClicksTheAddressSection() {
+
     }
 
     @Then("The user should be navigated to the Address section")

@@ -16,6 +16,7 @@ public class Hooks {
     public static WebDriver driver;
     LoginPage loginpage;
     User_Profile up;
+
     @Before(order = 0)
     public void setup() {
         driver = new ChromeDriver();
@@ -24,7 +25,7 @@ public class Hooks {
 
         // Initialize LoginPage after WebDriver setup
         loginpage = new LoginPage(driver);
-         up = new User_Profile(Hooks.driver);
+        up = new User_Profile(Hooks.driver);
     }
 
     @Before(order = 1)
@@ -47,7 +48,6 @@ public class Hooks {
         up.click_Profile();
     }
 
-    }
 
    /* @After
     public void tearDown() {
@@ -55,4 +55,7 @@ public class Hooks {
             driver.quit();
         }
     }*/
+}
+
+
 

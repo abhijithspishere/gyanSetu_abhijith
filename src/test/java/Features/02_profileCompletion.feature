@@ -3,16 +3,16 @@ Feature: User Profile Completion
   Scenario: Completing User Profile in One Flow
 # Filling Basic Information Section
     Given The user is on the Basic Information section
-    When The user enters "Suresh" as First Name
-    And The user enters "Kumar" as Last Name
+    When The user enters "Arjun" as First Name
+    And The user enters "Suresh" as Last Name
     And The user selects Gender
     And The user enters DOB
-    And The user enters "Michael Doe" as Father Name
-    And The user enters "Jane Doe" as Mother Name
-    And The user enters "Robert Smith" as Guardian Name
+    And The user enters "Suresh Kumar" as Father Name
+    And The user enters "Ajanta" as Mother Name
+    And The user enters "Suresh Kumar" as Guardian Name
     And The user enters "Software Engineer" as Aim
     And The user uploads a profile picture
-    And The user clicks the Next button
+    And The user clicks the Address Section
 
 # Filling Current Address
     And The user enters "123 Main Street" as Address 1
