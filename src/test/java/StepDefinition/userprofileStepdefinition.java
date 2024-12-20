@@ -67,25 +67,23 @@ public class userprofileStepdefinition {
 
     @And("The user clicks the Address Section")
     public void theUserClicksTheAddressSection() {
-
+        up.set_Address();
     }
 
-    @Then("The user should be navigated to the Address section")
-    public void the_user_should_be_navigated_to_the_address_section() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    @And("The user enters {string} as FirstAddress")
+    public void theUserEntersAsFirstAddress(String stringAddress_1) {
+        up.input_Address(stringAddress_1);
     }
 
-    @Given("The user is on the Address section")
-    public void the_user_is_on_the_address_section() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    @And("The user enters {string} as SecondAddress")
+    public void theUserEntersAsSecondAddress(String stringAddress_2) {
+        up.input_Address2(stringAddress_2);
     }
 
-    @When("The user enters {string} as Address {int}")
-    public void the_user_enters_as_address(String string, Integer int1) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+
+    @And("The user selects as Country")
+    public void theUserSelectsAsCountry() {
+        up.select_Country();
     }
 
     @When("The user selects {string} as Country")

@@ -15,13 +15,13 @@ Feature: User Profile Completion
     And The user clicks the Address Section
 
 # Filling Current Address
-    And The user enters "123 Main Street" as Address 1
-    And The user enters "Apt 101" as Address 2
-    And The user selects "USA" as Country
-    And The user selects "California" as State
-    And The user enters "Los Angeles" as City
-    And The user enters "Los Angeles" as District
-    And The user enters "90001" as Pincode
+    And The user enters "NNRA 58 Nalanda Nanthencode" as FirstAddress
+    And The user enters "Kowdiar PO Thiruvananthapuram" as SecondAddress
+    And The user selects as Country
+    And The user selects "Kerala" as State
+    And The user enters "Thiruvananthapuram" as City
+    And The user enters "Thiruvananthapuram" as District
+    And The user enters "695003" as Pincode
 
 # Selecting Same as Current Address for Permanent Address
     And The user selects "Same as Current Address" for permanent address

@@ -4,6 +4,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.Select;
 
 public class User_Profile extends BasePage {
 
@@ -56,6 +57,15 @@ public class User_Profile extends BasePage {
 
         @FindBy(xpath = "//div[@class='wizard-sidebar']//div[4]//div[1]")
         WebElement select_Address;
+
+        @FindBy(xpath = "//div[@class='form-step active']//div[@class='row']//input[@name='address1']")
+        WebElement txt_Address1;
+
+        @FindBy(xpath = "//div[@class='form-step active']//div[@class='row']//input[@name='address2']")
+        WebElement txt_Address2;
+
+        @FindBy(xpath = "//div[@class='form-step active']//div[@class='row']//select[@name='rcrs-country']")
+        WebElement dropCountry;
 
         public void profileClose() throws InterruptedException {
             Btn_profileChat_close.click();
@@ -118,6 +128,19 @@ public class User_Profile extends BasePage {
         }
         public void set_Address(){
             select_Address.click();
+        }
+
+        public  void input_Address(String address){
+            txt_Address1.sendKeys(address);
+        }
+
+        public void input_Address2(String address2){
+            txt_Address2.sendKeys(address2);
+        }
+
+        public void select_Country(){
+            Select sl =  new Select(dropCountry);
+            sl.selectByVisibleText("India");
         }
 
 }
