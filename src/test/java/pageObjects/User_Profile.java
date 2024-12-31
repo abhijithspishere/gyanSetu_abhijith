@@ -67,10 +67,32 @@ public class User_Profile extends BasePage {
         @FindBy(xpath = "//div[@class='form-step active']//div[@class='row']//select[@name='rcrs-country']")
         WebElement dropCountry;
 
+        @FindBy(xpath = "//div[@class='form-step active']//div[@class='row']//select[@name='rcrs-region']")
+        WebElement dropState;
+
+        @FindBy(xpath = "//div[@class='form-step active']//div[@class='row']//input[@name='city']")
+        WebElement txt_City;
+
+        @FindBy(xpath = "//div[@class='form-step active']//div[@class='row']//input[@name='district']")
+        WebElement txt_District;
+
+        @FindBy(xpath = "//div[@class='form-step active']//div[@class='row']//input[@name='pincode']")
+        WebElement txt_Pincode;
+
+        @FindBy(xpath = "//input[@name='sameAsCurrent']")
+        WebElement sameAsCurrent;
+
+        @FindBy(xpath = "//div[@class='step active']")
+        WebElement selectHobby;
+
+        @FindBy(xpath="//div[@id='demo-multiple-checkbox']")
+        WebElement hobbyChkbox;
+
+        @FindBy(xpath = "//div[@id='menu-']//li[1]")
+        WebElement hobbySketching;
+
         public void profileClose() throws InterruptedException {
             Btn_profileChat_close.click();
-//            System.out.println("clicked close button");
-//            Thread.sleep(1000);
         }
 
         public void Closechat() {
@@ -100,8 +122,6 @@ public class User_Profile extends BasePage {
 
         public void setDateOfBirth() throws InterruptedException {
             dateOfBirth.click();
-//            dateOfBirth.clear();
-//            dateOfBirth.sendKeys("12/12/2005");
             calendarDate.click();
         }
 
@@ -122,7 +142,7 @@ public class User_Profile extends BasePage {
         }
 
         public void set_profilePicture(){
-//            upload_profilePicture.click();
+
             upload_profilePicture.sendKeys("C:/Users/WIIS/Downloads/WhatsApp Image 2024-11-05 at 10.34.37_aa138e0asss.jpg");
 
         }
@@ -141,6 +161,36 @@ public class User_Profile extends BasePage {
         public void select_Country(){
             Select sl =  new Select(dropCountry);
             sl.selectByVisibleText("India");
+
+        }
+        public void select_State() throws InterruptedException {
+//            Thread.sleep(2000);
+            Select sl_state = new Select(dropState);
+            sl_state.selectByVisibleText("Kerala");
+        }
+        public void input_City(String city){
+            txt_City.sendKeys(city);
+        }
+
+        public void input_District(String district){
+            txt_District.sendKeys(district);
+        }
+
+        public void inputPincode (String pincode){
+            txt_Pincode.sendKeys(pincode);
+        }
+
+        public void setSameAsCurrentAddress() throws InterruptedException {
+            sameAsCurrent.click();
+
+        }
+
+        public void setHobby() throws InterruptedException {
+            Thread.sleep(2000);
+            selectHobby.click();
+            System.out.println("clickedHobby");
+            hobbyChkbox.click();
+            hobbySketching.click();
         }
 
 }
