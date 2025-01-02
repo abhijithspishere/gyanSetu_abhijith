@@ -15,7 +15,7 @@ public class userprofileStepdefinition {
 
     @Given("The user is on the Basic Information section")
     public void the_user_is_on_the_basic_information_section() throws InterruptedException {
-        System.out.println("Entering FirstName now");
+        System.out.println("Entering Basic Informations Now");
 
     }
 
@@ -61,7 +61,7 @@ public class userprofileStepdefinition {
     }
 
     @When("The user uploads a profile picture")
-    public void the_user_uploads_a_profile_picture() {
+    public void the_user_uploads_a_profile_picture() throws InterruptedException {
        up.set_profilePicture();
     }
 
@@ -118,82 +118,91 @@ public class userprofileStepdefinition {
     public void the_user_clicks_the_hobbies_language_session() throws InterruptedException {
         up.setHobby();
     }
-    @When("The user selects {string} as Hobby")
-    public void the_user_selects_as_hobby(String string) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+
+    @When("The user selects different Hobbies")
+    public void the_user_selects_as_hobby() throws InterruptedException {
+       up.setCheckBox();
     }
-    @When("The user selects {string} as Language Known")
-    public void the_user_selects_as_language_known(String string) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+
+    @When("The user selects Known Languages")
+    public void the_user_selects_as_language_known() {
+        up.setSelectLanguage();
     }
+
     @When("The user selects Both as Proficiency")
     public void the_user_selects_both_as_proficiency() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        up.setProficiency();
     }
+
     @When("The user clicks the Academic History Session")
     public void the_user_clicks_the_academic_history_session() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        up.setSelectAcademic();
     }
+
     @When("The user selects Institute Type as School")
-    public void the_user_selects_institute_type_as_school() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    public void the_user_selects_institute_type_as_school() throws InterruptedException {
+        up.setInstituteType();
     }
+
     @When("The user selects CBSE as Board")
-    public void the_user_selects_cbse_as_board() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    public void the_user_selects_cbse_as_board() throws InterruptedException {
+        up.setBoard();
     }
-    @When("The user selects Class {int} as Class")
-    public void the_user_selects_class_as_class(Integer int1) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+
+    @When("The user selects Class")
+    public void the_user_selects_class_as_class() throws InterruptedException {
+        up.setClass();
     }
+
+    @And("The user clicks next")
+    public void theUserClicksNext() {
+        up.ClickNext();
+    }
+
     @When("The user clicks the Contact Details")
     public void the_user_clicks_the_contact_details() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        up.ContactPage();
     }
+
     @When("The user enters {string} as Mobile Number")
-    public void the_user_enters_as_mobile_number(String string) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    public void the_user_enters_as_mobile_number(String stringMobileNumber) {
+        up.setMobileNumber(stringMobileNumber);
     }
+
     @When("The user enters {string} as WhatsApp Number")
-    public void the_user_enters_as_whats_app_number(String string) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    public void the_user_enters_as_whats_app_number(String stringWhatsapp) {
+        up.setWhatsappNumber(stringWhatsapp);
     }
+
     @When("The user clicks on Subject Preference Session")
     public void the_user_clicks_on_subject_preference_session() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        up.clickSubjectPreference();
     }
+
     @When("The user selects Science as Subject")
-    public void the_user_selects_science_as_subject() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    public void the_user_selects_science_as_subject() throws InterruptedException {
+        up.setSubject();
     }
+
     @When("The user enters the preferences")
     public void the_user_enters_the_preferences() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        up.setPreference();
     }
+
     @When("The user enters {string} as Score Percentage")
-    public void the_user_enters_as_score_percentage(String string) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    public void the_user_enters_as_score_percentage(String stringScore) {
+        up.setScorePercentage(stringScore);
     }
+
     @When("The user clicks the Submit button")
     public void the_user_clicks_the_submit_button() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        up.btnSubmit();
+
     }
 
 
-
+    @Then("Displays User entered profile details successfully")
+    public void displaysUserEnteredProfileDetailsSuccessfully() throws InterruptedException {
+        up.SuccessMessage();
+    }
 }

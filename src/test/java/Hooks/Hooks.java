@@ -32,7 +32,7 @@ public class Hooks {
     public void globalSignin() throws InterruptedException {
         driver.get("https://qaweb.gyansetu.ai/");
         loginpage.clickSignIn();
-        loginpage.inputEmail("aiswarya@gmail.com");
+        loginpage.inputEmail("aiswarya.dd@gmail.com");
         loginpage.inputPassword("Xtreme@1");
         loginpage.clickBtnSignIn();
 
@@ -49,12 +49,12 @@ public class Hooks {
     }
 
 
-   /* @After
+    @After
     public void tearDown() {
         if (driver != null) {
             driver.quit();
         }
-    }*/
+    }
 }
 
 

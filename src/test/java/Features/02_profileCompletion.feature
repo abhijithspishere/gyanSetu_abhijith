@@ -28,16 +28,16 @@ Feature: User Profile Completion
     And The user clicks the Hobbies Language Session
 
 # Filling Hobbies and Languages
-    And The user selects "Reading" as Hobby
-    And The user selects "English" as Language Known
+    And The user selects different Hobbies
+    And The user selects Known Languages
     And The user selects Both as Proficiency
     And The user clicks the Academic History Session
 
 # Filling Academic History
     And The user selects Institute Type as School
     And The user selects CBSE as Board
-    And The user selects Class 12 as Class
-#    And The user clicks next
+    And The user selects Class
+    And The user clicks next
     And The user clicks the Contact Details
 
 # Filling Contact Details
@@ -51,3 +51,4 @@ Feature: User Profile Completion
     And The user enters the preferences
     And The user enters "85" as Score Percentage
     And The user clicks the Submit button
+    Then Displays User entered profile details successfully
