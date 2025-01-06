@@ -429,15 +429,17 @@ public class User_Profile extends BasePage {
         public void btnSubmit()
         {
             submit.click();
+
         }
 
         public void SuccessMessage() throws InterruptedException {
+            Thread.sleep(2000);
             String validation = inputChat.getAttribute("placeholder");
             if(validation.equals("Type your question")){
                 System.out.println("User Entered Profile Details Successfully and reached Dashboard");
 
             }
-            Thread.sleep(2000);
+
         }
 
 }

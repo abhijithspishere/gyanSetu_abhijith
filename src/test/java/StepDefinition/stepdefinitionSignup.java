@@ -13,8 +13,8 @@ public class stepdefinitionSignup {
 
        @Given("User navigate to signup page")
         public void user_navigate_to_signup_page() {
-            System.out.println("Navigating to signup page...");
-//           hp = new HomePage(Hooks.driver);
+           System.out.println("Navigating to signup page...");
+           hp = new HomePage(Hooks.driver);
         }
 
     @When("User enters valid {string} and {string}")
@@ -29,8 +29,8 @@ public class stepdefinitionSignup {
 
     @Then("user should be able to see User created successfully")
     public void user_should_be_able_to_see_user_created_successfully() throws InterruptedException {
-        hp.clickSignUpNow();
-//        hp.fetchValidate();
+           hp.clickSignUpNow();
+//           hp.fetchValidate();
 
     }
 

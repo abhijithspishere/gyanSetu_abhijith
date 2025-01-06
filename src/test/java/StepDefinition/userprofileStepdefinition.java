@@ -13,8 +13,15 @@ public class userprofileStepdefinition {
 
     User_Profile up = new User_Profile(Hooks.driver);
 
+
+
     @Given("The user is on the Basic Information section")
     public void the_user_is_on_the_basic_information_section() throws InterruptedException {
+        up.profileClose();
+        up.Closechat();
+        up.click_ProfileDrop();
+        up.click_Profile();
+
         System.out.println("Entering Basic Informations Now");
 
     }

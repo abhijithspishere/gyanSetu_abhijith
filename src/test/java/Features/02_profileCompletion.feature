@@ -1,6 +1,12 @@
-Feature: User Profile Completion
+Feature: User Profile Completion after Logging in
 
-  Scenario: Completing User Profile in One Flow
+  Scenario: User Logging in and Completing the Profile Editing page in One Flow.
+
+    Given user navigate to login page
+    When user enters valid username as "sushma.@gmail.com" and password as "Xtreme@1"
+    And user clicks on Sign in Now Button
+    Then Validate the user can see the profile creation page
+
 # Filling Basic Information Section
     Given The user is on the Basic Information section
     When The user enters "Arjun" as First Name

@@ -9,6 +9,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
+
+//Registration Page
 public class HomePage extends BasePage
 {
     public HomePage(WebDriver driver)

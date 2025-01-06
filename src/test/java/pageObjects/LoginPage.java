@@ -53,7 +53,5 @@ public class LoginPage  extends BasePage {
         WebElement chatBox = wait.until(ExpectedConditions.visibilityOf(chatBoxName));
         return chatBox.getText().trim();
     }
-
-
-
+    
 }

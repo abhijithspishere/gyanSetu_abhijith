@@ -24,29 +24,29 @@ public class Hooks {
         driver.manage().window().maximize();
 
         // Initialize LoginPage after WebDriver setup
-        loginpage = new LoginPage(driver);
-        up = new User_Profile(Hooks.driver);
+//        loginpage = new LoginPage(driver);
+//        up = new User_Profile(Hooks.driver);
     }
 
     @Before(order = 1)
     public void globalSignin() throws InterruptedException {
         driver.get("https://qaweb.gyansetu.ai/");
-        loginpage.clickSignIn();
-        loginpage.inputEmail("aiswarya.dd@gmail.com");
-        loginpage.inputPassword("Xtreme@1");
-        loginpage.clickBtnSignIn();
+//        loginpage.clickSignIn();
+//        loginpage.inputEmail("aiswarya.556@gmail.com");
+//        loginpage.inputPassword("Xtreme@1");
+//        loginpage.clickBtnSignIn();
 
-        Assert.assertTrue(
-                "Validation failed: Expected text not found!",
-                loginpage.chatBoxTextValidation().contains("What is your full name?")
-        );
-        System.out.println("User login successfully");
-//
-        up.profileClose();
-        up.Closechat();
-        up.click_ProfileDrop();
-        up.click_Profile();
-    }
+//        Assert.assertTrue(
+//                "Validation failed: Expected text not found!",
+//                loginpage.chatBoxTextValidation().contains("What is your full name?")
+//        );
+//        System.out.println("User login successfully");
+////
+//        up.profileClose();
+//        up.Closechat();
+//        up.click_ProfileDrop();
+//        up.click_Profile();
+   }
 
 
     @After
@@ -55,7 +55,8 @@ public class Hooks {
             driver.quit();
         }
     }
-}
+    }
+
 
 
 
