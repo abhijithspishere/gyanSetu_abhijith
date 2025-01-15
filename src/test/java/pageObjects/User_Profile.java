@@ -66,8 +66,8 @@ public class User_Profile extends BasePage {
         @FindBy(xpath = "//input[@id='file']")
         WebElement upload_profilePicture;
 
-//        @FindBy(xpath = "//div[@class='wizard-sidebar']//div[4]//div[1]")
-//        WebElement select_Address;
+//      @FindBy(xpath = "//div[@class='wizard-sidebar']//div[4]//div[1]")
+//      WebElement select_Address;
 
         @FindBy(xpath = "//button[contains(@class,'btn btn-dark px-lg-5 mt-3 ms-auto d-block rounded-pill next-btn px-4')]")
         WebElement select_AddressNext;
@@ -153,7 +153,7 @@ public class User_Profile extends BasePage {
         @FindBy(xpath = "//li[normalize-space()='Both']")
         WebElement selectBoth;
 
-      /*  @FindBy(xpath = "//div[@class='wizard-sidebar']//div[6]//div[1]//*[name()='svg']")
+      /*@FindBy(xpath = "//div[@class='wizard-sidebar']//div[6]//div[1]//*[name()='svg']")
         WebElement selectAcademic;*/
 
         @FindBy(xpath = "//div[contains(@class,'row justify-content-center')]//button[contains(@type,'button')][normalize-space()='Next']")
@@ -177,7 +177,7 @@ public class User_Profile extends BasePage {
         @FindBy(xpath = "//li[normalize-space()='class 09']")
         WebElement selectClass09;
 
-      /*  @FindBy(xpath="//div[@class='wizard-sidebar']//div[7]//div[1]//*[name()='svg']")
+      /*@FindBy(xpath="//div[@class='wizard-sidebar']//div[7]//div[1]//*[name()='svg']")
         WebElement contactDetails;*/
 
         @FindBy(xpath = "//button[@class='btn btn-dark px-lg-5 ms-auto d-block rounded-pill next-btn']")
@@ -286,15 +286,15 @@ public class User_Profile extends BasePage {
             txt_Address2.sendKeys(address2);
         }
 
-        public void select_Country(){
+        public void select_Country(String county){
             Select sl =  new Select(dropCountry);
-            sl.selectByVisibleText("India");
+            sl.selectByVisibleText(county);
 
         }
-        public void select_State() throws InterruptedException {
+        public void select_State(String state) throws InterruptedException {
 //            Thread.sleep(2000);
             Select sl_state = new Select(dropState);
-            sl_state.selectByVisibleText("Kerala");
+            sl_state.selectByVisibleText(state);
         }
         public void input_City(String city){
             txt_City.sendKeys(city);

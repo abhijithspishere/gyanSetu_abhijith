@@ -7,6 +7,9 @@ Feature: signUp User View
 
     Examples:
       | username                      | password   |
-      | sushma.@gmail.com        | Xtreme@1   |
+      | sushma.@gmail.com             | Xtreme@1   |
+      | priya123@gmail.com            | Xtreme@1   |
+      |aravindkumar@gmail.com         | Xtreme@1   |
+
 
 

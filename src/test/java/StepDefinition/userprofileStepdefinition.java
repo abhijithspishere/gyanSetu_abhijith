@@ -21,7 +21,6 @@ public class userprofileStepdefinition {
         up.Closechat();
         up.click_ProfileDrop();
         up.click_Profile();
-
         System.out.println("Entering Basic Informations Now");
 
     }
@@ -88,16 +87,16 @@ public class userprofileStepdefinition {
     }
 
 
-    @And("The user selects India as Country")
-    public void theUserSelectsAsCountry() throws InterruptedException {
-        up.select_Country();
+    @And("The user selects {string} as Country")
+    public void theUserSelectsAsCountry(String country) throws InterruptedException {
+        up.select_Country(country);
 //        Thread.sleep(1000);
     }
 
 
-    @When("The user selects Kerala as State")
-    public void the_user_selects_as_state() throws InterruptedException {
-      up.select_State();
+    @When("The user selects {string} as State")
+    public void the_user_selects_as_state(String st) throws InterruptedException {
+      up.select_State(st);
     }
 
     @When("The user enters {string} as City")
